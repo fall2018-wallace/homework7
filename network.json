@@ -79,8 +79,11 @@
         },
         {
             "name": "mapplot.png"
+        },
+        {
+            "name": "mapzoom.png"
         }
     ],
-    "updated_at": "2018-10-18 03:49:49",
+    "updated_at": "2018-10-18 03:49:59",
     "url": "https://github.com/fall2018-wallace/homework7"
 }
