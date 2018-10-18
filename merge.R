@@ -11,8 +11,8 @@ CombinedData #display combined data
 #2)	Add the area of each state, and the center of each state, to the merged dataframe, using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
 statename<-state.name #added the statenames gathered into 'statename' variable
 stateArea<- state.area #added the areas of the state into 'stateArea' variable
-stateCenter<-state.center
-newFrame<-data.frame(statename,stateArea,stateCenter)
+stateCenter<-state.center #added the center of the states into 'stateCenter' variable
+newFrame<-data.frame(statename,stateArea,stateCenter) #combined states names, areas and centers into new frame
 CombinedData<-merge(CombinedData,newFrame)
 CombinedData
 CombinedData$statename= tolower(CombinedData$statename)
