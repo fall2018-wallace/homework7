@@ -26,9 +26,9 @@ maparea <- maparea +  coord_map() + ggtitle("Color based on Area of the state") 
 maparea
 
 #4)	Repeat step B, but color code the map based on the murder rate of each state.
-mapmurder <- ggplot(CombinedData,aes(map_id = statename))
-mapmurder <- mapmurder + geom_map(map = usa, aes(fill = CombinedData$Murder))
-mapmurder <-  mapmurder + expand_limits(x	=	usa$long,	y	=	usa$lat)	
+mapmurder <- ggplot(CombinedData,aes(map_id = statename)) 
+mapmurder <- mapmurder + geom_map(map = usa, aes(fill = CombinedData$Murder)) #similar to the previous map, here we specify colors to be filled based on the murder data in the maps
+mapmurder <-  mapmurder + expand_limits(x	=	usa$long,	y	=	usa$lat) #	
 mapmurder <- mapmurder +  coord_map() + ggtitle("Color based on Murders in the states")
 mapmurder
 
