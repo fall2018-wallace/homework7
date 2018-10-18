@@ -9,8 +9,8 @@ CombinedData <- merge(data,arrests,by.x = "statename",by.y = 0) #merged the colu
 CombinedData #display combined data
 
 #2)	Add the area of each state, and the center of each state, to the merged dataframe, using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
-statename<-state.name #
-stateArea<- state.area
+statename<-state.name #added the statenames gathered into 'statename' variable
+stateArea<- state.area #
 stateCenter<-state.center
 newFrame<-data.frame(statename,stateArea,stateCenter)
 CombinedData<-merge(CombinedData,newFrame)
