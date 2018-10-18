@@ -15,7 +15,7 @@ stateCenter<-state.center #added the center of the states into 'stateCenter' var
 newFrame<-data.frame(statename,stateArea,stateCenter) #combined states names, areas and centers into new frame
 CombinedData<-merge(CombinedData,newFrame) #merged the above combined data and the new frame into CombinedData
 CombinedData
-CombinedData$statename= tolower(CombinedData$statename) #set all the state names to lower case
+CombinedData$statename= tolower(CombinedData$statename) #set all the state names to lower case to use ggplot
 
 #3)	Create a color coded map, based on the area of the state
 usa <- map_data("state") #added the state mapdata into variable named usa
@@ -34,7 +34,7 @@ mapmurder
 
 #5)	Show the population as a circle per state (the larger the population, the larger the circle), using the location defined by the center of each state
 mapplot <- ggplot(CombinedData, aes(map_id=statename)) 
-mapplot <- mapplot + geom_map(map=usa, aes(fill=CombinedData$population)) + expand_limits(x= usa$long, y= usa$lat) + coord_map() #here, the code fils the color in the map based on population 
+mapplot <- mapplot + geom_map(map=usa, aes(fill=CombinedData$population)) + expand_limits(x= usa$long, y= usa$lat) + coord_map() #here, the code fills the color in the map based on population 
 mapplot <- mapplot + geom_point(aes(x = x, y = y, size=population)) #geom_point is used to plot points on the map at locations x and y which are the coordinates of the center of the regions of the states and size specifies that the size of the points plotted should be based on the population in the states
 mapplot
 
