@@ -18,8 +18,8 @@ CombinedData
 CombinedData$statename= tolower(CombinedData$statename) #set all the state names to lower case
 
 #3)	Create a color coded map, based on the area of the state
-usa <- map_data("state")
-maparea <- ggplot(CombinedData,aes(map_id = statename))
+usa <- map_data("state") #added the state mapdata into variable named usa
+maparea <- ggplot(CombinedData,aes(map_id = statename)) #
 maparea <- maparea + geom_map(map = usa, aes(fill = stateArea))
 maparea <-  maparea + expand_limits(x	=	usa$long,	y	=	usa$lat)	
 maparea <- maparea +  coord_map() + ggtitle("Color based on Area of the state")
