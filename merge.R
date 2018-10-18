@@ -27,21 +27,21 @@ maparea
 
 #4)	Repeat step B, but color code the map based on the murder rate of each state.
 mapmurder <- ggplot(CombinedData,aes(map_id = statename)) 
-mapmurder <- mapmurder + geom_map(map = usa, aes(fill = CombinedData$Murder)) #similar to the previous map, here we specify colors to be filled based on the murder data in the maps
-mapmurder <-  mapmurder + expand_limits(x	=	usa$long,	y	=	usa$lat) #	
+mapmurder <- mapmurder + geom_map(map = usa, aes(fill = CombinedData$Murder)) #similar to the previous map, here the code specifies colors to be filled based on the murder data in the maps
+mapmurder <-  mapmurder + expand_limits(x	=	usa$long,	y	=	usa$lat) 
 mapmurder <- mapmurder +  coord_map() + ggtitle("Color based on Murders in the states")
 mapmurder
 
 #5)	Show the population as a circle per state (the larger the population, the larger the circle), using the location defined by the center of each state
 mapplot <- ggplot(CombinedData, aes(map_id=statename)) 
-mapplot <- mapplot + geom_map(map=usa, aes(fill=CombinedData$population)) + expand_limits(x= usa$long, y= usa$lat) + coord_map()
-mapplot <- mapplot + geom_point(aes(x = x, y = y, size=population))
+mapplot <- mapplot + geom_map(map=usa, aes(fill=CombinedData$population)) + expand_limits(x= usa$long, y= usa$lat) + coord_map() #here, the code fils the color in the map based on population 
+mapplot <- mapplot + geom_point(aes(x = x, y = y, size=population)) #geom_point is used to plot points on the map at locations x and y which are the coordinates of the center of the regions of the states and size specifies that the size of the points plotted should be based on the population in the states
 mapplot
 
 #6)	Repeat step C, but only show the states in the north east
 #Hint: get the lat and lon of new york city
 #Hint: set the xlim and ylim to NYC +/- 10
-latlon <- geocode(source = "dsk","nyc,new york,ny")
+latlon <- geocode(source = "dsk","nyc,new york,ny") #geocode finds the latitude and longitude of nyc from dsk source
 latlon
-mapzoom<-mapplot+ xlim(-84,-64)+ ylim(30,50)
+mapzoom<-mapplot+ xlim(-84,-64)+ ylim(30,50) #as mentioned in the questioned, the code sets xlim and y lim of latlon to -/+ 10 values
 mapzoom
