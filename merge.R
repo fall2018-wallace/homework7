@@ -43,5 +43,5 @@ mapplot
 #Hint: set the xlim and ylim to NYC +/- 10
 latlon <- geocode(source = "dsk","nyc,new york,ny")
 latlon
-mapplot<-mapplot+ xlim(-84,-54)+ ylim(30,50)
-mapplot
+mapzoom<-mapplot+ xlim(-84,-54)+ ylim(30,50)
+mapzoom
