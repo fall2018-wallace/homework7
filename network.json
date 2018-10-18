@@ -44,6 +44,16 @@
             ],
             "source": "merge.R",
             "target": "mapmurder.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapplot",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "mapplot.png"
         }
     ],
     "nodes": [
@@ -71,6 +81,6 @@
             "name": "mapplot.png"
         }
     ],
-    "updated_at": "2018-10-18 03:49:41",
+    "updated_at": "2018-10-18 03:49:49",
     "url": "https://github.com/fall2018-wallace/homework7"
 }
