@@ -13,6 +13,17 @@
             ],
             "source": "scprc_est_2017_18_pop_res.csv",
             "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "data",
+                    "output": "clean_data",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "clean.R",
+            "target": "merge.R"
         }
     ],
     "nodes": [
@@ -29,6 +40,6 @@
             "name": "merge.R"
         }
     ],
-    "updated_at": "2018-10-18 03:44:34",
+    "updated_at": "2018-10-18 03:44:56",
     "url": "https://github.com/fall2018-wallace/homework7"
 }
