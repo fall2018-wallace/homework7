@@ -20,8 +20,8 @@ CombinedData$statename= tolower(CombinedData$statename) #set all the state names
 #3)	Create a color coded map, based on the area of the state
 usa <- map_data("state") #added the state mapdata into variable named usa
 maparea <- ggplot(CombinedData,aes(map_id = statename)) #used ggplot and passed it the map id which in this case is statename
-maparea <- maparea + geom_map(map = usa, aes(fill = stateArea))
-maparea <-  maparea + expand_limits(x	=	usa$long,	y	=	usa$lat)	
+maparea <- maparea + geom_map(map = usa, aes(fill = stateArea)) #geom_map will map the mapdata in variable usa and fill the regions by the area in the states
+maparea <-  maparea + expand_limits(x	=	usa$long,	y	=	usa$lat) #	
 maparea <- maparea +  coord_map() + ggtitle("Color based on Area of the state")
 maparea
 
