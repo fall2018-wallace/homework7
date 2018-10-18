@@ -24,6 +24,16 @@
             ],
             "source": "clean.R",
             "target": "merge.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "maparea",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "maparea.png"
         }
     ],
     "nodes": [
@@ -45,6 +55,6 @@
             "name": "maparea.png"
         }
     ],
-    "updated_at": "2018-10-18 03:48:59",
+    "updated_at": "2018-10-18 03:49:09",
     "url": "https://github.com/fall2018-wallace/homework7"
 }
