@@ -36,10 +36,15 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "urvi15mistry",
             "desc": "",
-            "name": "merge.R"
+            "name": "merge.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "maparea.png"
         }
     ],
-    "updated_at": "2018-10-18 03:44:56",
+    "updated_at": "2018-10-18 03:48:59",
     "url": "https://github.com/fall2018-wallace/homework7"
 }
