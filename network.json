@@ -54,6 +54,16 @@
             ],
             "source": "merge.R",
             "target": "mapplot.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapzoom",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "mapzoom.png"
         }
     ],
     "nodes": [
@@ -84,6 +94,6 @@
             "name": "mapzoom.png"
         }
     ],
-    "updated_at": "2018-10-18 03:49:59",
+    "updated_at": "2018-10-18 03:50:10",
     "url": "https://github.com/fall2018-wallace/homework7"
 }
