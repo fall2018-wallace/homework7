@@ -13,9 +13,8 @@ statename<-state.name
 stateArea<- state.area
 stateCenter<-state.center
 newFrame<-data.frame(statename,stateArea,stateCenter)
-View(newFrame)
 CombinedData<-merge(CombinedData,newFrame)
-View(CombinedData)
+CombinedData
 CombinedData$statename= tolower(CombinedData$statename)
 
 #3)	Create a color coded map, based on the area of the state
