@@ -21,8 +21,8 @@ CombinedData$statename= tolower(CombinedData$statename) #set all the state names
 usa <- map_data("state") #added the state mapdata into variable named usa
 maparea <- ggplot(CombinedData,aes(map_id = statename)) #used ggplot and passed it the map id which in this case is statename
 maparea <- maparea + geom_map(map = usa, aes(fill = stateArea)) #geom_map will map the mapdata in variable usa and fill the regions by the area in the states
-maparea <-  maparea + expand_limits(x	=	usa$long,	y	=	usa$lat) #	
-maparea <- maparea +  coord_map() + ggtitle("Color based on Area of the state")
+maparea <-  maparea + expand_limits(x	=	usa$long,	y	=	usa$lat) #expanded the x and y limits based on the latitude and longitudes of usa
+maparea <- maparea +  coord_map() + ggtitle("Color based on Area of the state") #
 maparea
 
 #4)	Repeat step B, but color code the map based on the murder rate of each state.
