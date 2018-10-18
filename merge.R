@@ -13,9 +13,9 @@ statename<-state.name #added the statenames gathered into 'statename' variable
 stateArea<- state.area #added the areas of the state into 'stateArea' variable
 stateCenter<-state.center #added the center of the states into 'stateCenter' variable
 newFrame<-data.frame(statename,stateArea,stateCenter) #combined states names, areas and centers into new frame
-CombinedData<-merge(CombinedData,newFrame)
+CombinedData<-merge(CombinedData,newFrame) #merged the above combined data and the new frame into CombinedData
 CombinedData
-CombinedData$statename= tolower(CombinedData$statename)
+CombinedData$statename= tolower(CombinedData$statename) #set all the state names to lower case
 
 #3)	Create a color coded map, based on the area of the state
 usa <- map_data("state")
