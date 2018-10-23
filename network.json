@@ -1,0 +1,99 @@
+{
+    "collaborators": [
+        "urvi15mistry"
+    ],
+    "created_at": "2018-10-18 03:41:46",
+    "edges": [
+        {
+            "ports": [
+                {
+                    "input": "raw_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "scprc_est_2017_18_pop_res.csv",
+            "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "data",
+                    "output": "clean_data",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "clean.R",
+            "target": "merge.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "maparea",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "maparea.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapmurder",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "mapmurder.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapplot",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "mapplot.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapzoom",
+                    "type": "png"
+                }
+            ],
+            "source": "merge.R",
+            "target": "mapzoom.png"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "scprc_est_2017_18_pop_res.csv"
+        },
+        {
+            "assigned_to": "urvi15mistry",
+            "name": "clean.R",
+            "task_status": "in progress"
+        },
+        {
+            "assigned_to": "urvi15mistry",
+            "desc": "",
+            "name": "merge.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "maparea.png"
+        },
+        {
+            "name": "mapmurder.png"
+        },
+        {
+            "name": "mapplot.png"
+        },
+        {
+            "name": "mapzoom.png"
+        }
+    ],
+    "updated_at": "2018-10-18 03:50:10",
+    "url": "https://github.com/fall2018-wallace/homework7"
+}
